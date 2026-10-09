@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Key Financial Figures 2025 – Medartis Group</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+<!-- Design-Einstellungen: werden vom Admin-Panel beim Speichern hier eingetragen -->
+<script id="design-settings" type="application/json">{}</script>
+<style>
+:root{
+  --night:#10133A; --deep:#1B2370; --blue:#3044B4;
+  --gold:#EDC25E; --gold-deep:#C9962F;
+  --ice:#C6DDF3; --ice-deep:#8FB3DE; --ink:#1C2147; --mist:#B9C4EA; --silver:#E6E9F5;
+  --pos:#B6F0C8; --neg:#FFC9A8;
+  --bg-angle:118; --glow:.55;
+  --h1k:1; --h1-wght:500; --h1-track:-.02em;
+  --num-wght:500; --tk:1;
+  --bk:1; --gloss:42%; --shadow:.55; --dim:.45;
+  --row-pad:9; --line-k:1; --area-op:.32; --chart-dur:1;
+  --maxw:1240; --sec-gap:48;
+  --rule:color-mix(in srgb, var(--mist) 22%, transparent);
+  --body:"Roboto",system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body::before{content:"";position:fixed;inset:0;z-index:-1;
+  background:
+    radial-gradient(1200px 700px at 78% 108%, color-mix(in srgb, var(--blue) calc(var(--glow) * 100%), transparent), transparent 60%),
+    linear-gradient(calc(var(--bg-angle) * 1deg), var(--night) 0%, var(--deep) 55%, var(--blue) 100%)}
+body{font-family:var(--body);font-weight:300;color:#fff;line-height:1.5;background:var(--night);min-height:100vh;-webkit-font-smoothing:antialiased}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:6px}
+.wrap{width:min(calc(var(--maxw) * 1px),92vw);margin-inline:auto}
+
+/* ---------- header ---------- */
+.top{display:flex;justify-content:space-between;align-items:baseline;padding:28px 0 0}
+.brand{font-weight:500;font-size:15px;color:var(--mist)}
+.jump{color:var(--mist);font-size:14px;text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;transition:color .2s,border-color .2s}
+.jump:hover{color:#fff;border-color:var(--gold)}
+
+/* ---------- hero ---------- */
+.hero{display:flex;flex-direction:column}
+h1{
+  font-family:var(--body);font-weight:var(--h1-wght);
+  font-size:calc(clamp(40px,6.4vw,92px) * var(--h1k));line-height:.95;letter-spacing:var(--h1-track);margin-top:clamp(28px,5vh,64px);
+}
+h1 .yr{font-weight:300;color:var(--ice)}
+.field{position:relative;container-type:inline-size;aspect-ratio:267/138;width:min(100%,calc((100svh - 250px) * 1.935));min-width:min(100%,760px);margin-top:clamp(8px,2vh,24px)}
+.node{position:absolute;left:var(--x);top:var(--y);width:0;height:0;will-change:transform}
+.bubble{
+  position:absolute;left:0;top:0;width:calc(var(--dn) * 1cqw * var(--k,1) * var(--bk));aspect-ratio:1;
+  font-size:calc(1cqw * var(--k,1) * var(--bk));
+  transform:translate(-50%,-50%) scale(var(--s,1));
+  border-radius:50%;border:0;cursor:pointer;line-height:1.2;color:var(--ink);font-family:var(--body);font-weight:300;
+  background:radial-gradient(circle at 32% 28%, #fff 0%, var(--c) var(--gloss), var(--c2) 100%);
+  box-shadow:0 2.2em 4em rgba(5,8,40,var(--shadow)), inset 0 -.8em 1.6em rgba(20,30,90,.18);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  transition:transform .5s var(--ease),filter .4s,opacity .4s,width .3s;
+}
+.bubble.ice{--c:var(--ice);--c2:var(--ice-deep)}
+.bubble.gold{--c:var(--gold);--c2:var(--gold-deep)}
+.field.dim .node:not(.on) .bubble{opacity:var(--dim);filter:saturate(.6)}
+.num{font-weight:var(--num-wght);line-height:.9;letter-spacing:-.025em;white-space:nowrap;font-variant-numeric:tabular-nums}
+.num small{font-size:.5em;font-weight:500;letter-spacing:0;margin-left:.06em}
+.num .pre{font-size:.36em;font-weight:500;margin-right:.18em;vertical-align:.5em;letter-spacing:0}
+.cap{font-family:var(--body);font-size:1.15em;color:color-mix(in srgb,var(--ink) 78%,transparent);margin-top:.6em}
+.hero-top{font-family:var(--body);font-weight:500;font-size:1.45em;margin-bottom:1.1em}
+.hero-sub{font-family:var(--body);font-weight:500;font-size:1.75em;margin-top:.9em;padding-top:.7em;border-top:1px solid color-mix(in srgb,var(--ink) 35%,transparent)}
+
+.lbl{position:absolute;left:calc(var(--lx) * 1cqw);top:calc(var(--ly) * 1cqw);width:calc(var(--lw) * 1cqw * var(--tk));transition:opacity .4s}
+.lbl h3{font-family:var(--body);font-weight:500;font-size:calc(clamp(14px,1.7cqw,22px) * var(--tk));line-height:1.2}
+.lbl .hl{color:var(--gold);font-weight:500;font-size:calc(clamp(12px,1.25cqw,16px) * var(--tk));margin-top:.2em}
+.lbl.r{left:auto;right:calc(var(--lx) * -1cqw);text-align:right}
+.lbl p{color:var(--mist);font-size:calc(clamp(12px,1.25cqw,16px) * var(--tk));margin-top:.35em;line-height:1.45}
+
+/* entrance */
+.js .node .bubble{--s:0}
+.js .node .lbl{opacity:0;transform:translateY(8px)}
+.js .ready .node .bubble{--s:1;transition:transform .9s cubic-bezier(.3,1.5,.5,1) var(--bd,0s),filter .4s,opacity .4s,width .3s}
+.js .ready .node .lbl{opacity:1;transform:none;transition:opacity .7s var(--ease) var(--ld,0s),transform .7s var(--ease) var(--ld,0s)}
+.js .ready .node.on .bubble{--s:1.05}
+.js .field.ready.dim .node:not(.on) .lbl{opacity:.3;transition:opacity .4s}
+.field.noanim *{transition:none!important}
+
+/* edit mode (admin) */
+.field.editing{user-select:none;-webkit-user-select:none;touch-action:none}
+.field.editing .node{transform:none!important}
+.field.editing .bubble{cursor:grab;outline:1.5px dashed rgba(255,255,255,.7);outline-offset:6px}
+.field.editing .lbl{cursor:grab;outline:1px dashed rgba(255,255,255,.45);outline-offset:6px;border-radius:4px}
+.field.editing .dragging{cursor:grabbing}
+
+.hint{color:var(--mist);font-size:13px;margin-top:12px;opacity:.75}
+.foot1{border-top:1px solid var(--rule);padding-top:12px;margin-top:10px;color:var(--mist);font-size:12.5px;opacity:.85}
+
+/* ---------- section 2 ---------- */
+.results{padding:calc(var(--sec-gap) * 1px) 0 40px}
+.sec-head{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:end;justify-content:space-between;margin-bottom:22px}
+h2{font-family:var(--body);font-weight:500;font-size:clamp(28px,3.4vw,44px);line-height:1;letter-spacing:-.015em}
+h2 .u{font-family:var(--body);font-weight:300;font-size:15px;color:var(--mist);letter-spacing:0;margin-left:10px}
+.seg{display:inline-flex;background:rgba(10,13,50,.45);border:1px solid var(--rule);border-radius:999px;padding:4px;position:relative}
+.seg button{position:relative;z-index:1;border:0;background:none;color:var(--mist);font:500 14px var(--body);padding:8px 18px;border-radius:999px;cursor:pointer;transition:color .3s}
+.seg button[aria-pressed="true"]{color:var(--ink)}
+.seg .pill{position:absolute;top:4px;bottom:4px;left:4px;border-radius:999px;background:var(--ice);transition:transform .45s var(--ease),width .45s var(--ease)}
+
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;min-width:860px;border-collapse:collapse;font-size:14.5px;font-variant-numeric:tabular-nums}
+th,td{padding:calc(var(--row-pad) * 1px) 12px;text-align:center;border-bottom:1px solid var(--rule);transition:background-color .45s var(--ease),color .45s var(--ease)}
+th,td{font-weight:300}
+th:first-child,td:first-child{text-align:left;font-weight:500;white-space:nowrap}
+thead tr:first-child th{color:var(--gold);font-weight:500;border-bottom:2px solid var(--gold);padding-top:0}
+thead tr:nth-child(2) th{color:var(--mist);font-weight:300;font-size:13px}
+tr.sep td{border-bottom:2px solid var(--gold)}
+tr.sub td{color:var(--gold);font-weight:500}
+tr.sub td.pp{font-size:13px}
+tbody tr:not(.sub):hover td{background-color:rgba(198,221,243,.07)}
+td.up{color:var(--pos)} td.down{color:var(--neg)}
+[data-hl="core"] .c-core,[data-hl="rep"] .c-rep{background-color:var(--ice);color:var(--ink)}
+[data-hl="core"] tbody tr:not(.sub):hover .c-core,[data-hl="rep"] tbody tr:not(.sub):hover .c-rep{background-color:color-mix(in srgb,var(--ice) 75%,#fff)}
+.notes{color:var(--mist);font-size:12.5px;margin-top:12px;opacity:.85;max-width:110ch}
+.notes p+p{margin-top:2px}
+
+/* charts */
+.charts{display:grid;grid-template-columns:1.35fr 1fr;gap:28px;margin-top:56px;align-items:stretch}
+.bars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.chart h3,.share h3{font-family:var(--body);font-weight:500;font-size:18px}
+.chart .unit,.share .unit{color:var(--mist);font-size:13px}
+.chart svg{width:100%;height:auto;display:block;margin-top:10px;overflow:visible}
+.bar{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);transition:transform calc(var(--chart-dur) * 1s) var(--ease),opacity .3s}
+.inview .bar{transform:scaleY(1)}
+.val{font-family:var(--body);font-weight:500;fill:#fff;opacity:0;transition:opacity .5s calc(var(--chart-dur) * .7s)}
+.inview .val{opacity:1}
+.yr-lbl{font:300 11px var(--body);fill:var(--mist);transition:fill .2s}
+.hit{fill:transparent;cursor:pointer}
+.bars[data-year] .grp:not(.sel) .bar{opacity:.3}
+.bars[data-year] .grp:not(.sel) .val{opacity:.35}
+.bars[data-year] .val{transition:opacity .25s}
+.grp.sel .yr-lbl{fill:#fff;font-weight:500}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--mist);margin-top:8px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.readout{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:14px;color:var(--mist);font-size:14.5px;min-height:3.2em}
+.readout b{color:#fff;font-weight:500}
+.readout .ri{display:inline-block;margin-right:18px}
+.readout .y{font-family:var(--body);font-weight:500;font-size:22px;color:var(--gold);margin-right:10px}
+
+.share{border:1px solid color-mix(in srgb,var(--mist) 60%,transparent);border-radius:4px;padding:22px 22px 14px;background:rgba(10,13,50,.28)}
+.series{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px}
+.series button{border:1px solid var(--rule);background:transparent;color:#fff;border-radius:999px;padding:5px 11px;font:300 12px var(--body);cursor:pointer;display:flex;align-items:baseline;gap:8px;transition:border-color .25s,background-color .25s}
+.series button b{font-family:var(--body);font-size:14px;font-weight:500}
+.series button:hover{border-color:var(--mist)}
+.series button[aria-pressed="true"]{background:rgba(198,221,243,.12);border-color:var(--mist)}
+.share svg{width:100%;height:auto;display:block;overflow:visible}
+.line{fill:none;stroke-linejoin:round;stroke-linecap:round;transition:opacity .35s}
+.share[data-focus] .line:not(.f), .share[data-focus] .end:not(.f){opacity:.18}
+.axis{font:300 11px var(--body);fill:var(--mist)}
+.grid{stroke:color-mix(in srgb,var(--mist) 18%,transparent);stroke-width:1}
+
+footer{padding:36px 0 48px;color:var(--mist);font-size:12.5px;opacity:.8}
+
+@media (max-width:980px){.charts{grid-template-columns:1fr}}
+@media (max-width:720px){
+  .field{aspect-ratio:auto;container-type:normal;width:100%;min-width:0;display:grid;grid-template-columns:1fr;gap:34px;margin-top:28px}
+  .node{position:relative;left:auto;top:auto;width:auto;height:auto;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;transform:none!important}
+  .bubble{position:relative;transform:scale(var(--s,1));width:calc(var(--dn) * 6.6px * var(--k,1));font-size:calc(6.6px * var(--k,1))}
+  .cap{font-size:11px;margin-top:4px}
+  .hero-top{font-size:12px;margin-bottom:6px} .hero-sub{font-size:13px;margin-top:8px;padding-top:6px}
+  .lbl{position:static;width:auto}
+  .lbl.r{text-align:left}
+  .lbl h3{font-size:17px} .lbl p,.lbl .hl{font-size:14px}
+  .node.hero-n{order:-1;grid-template-columns:1fr;justify-items:center;text-align:center}
+  .node.hero-n .lbl{max-width:34ch}
+  .bars{grid-template-columns:1fr;gap:34px}
+  .hint{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+  html{scroll-behavior:auto}
+}
+
+/* ================= ADMIN PANEL (fixe Farben, damit es lesbar bleibt) ================= */
+.adm-btn{position:fixed;right:20px;bottom:20px;z-index:40;border:0;border-radius:999px;padding:11px 18px;font:500 14px var(--body);background:#fff;color:#141737;box-shadow:0 8px 30px rgba(0,0,0,.35);cursor:pointer;display:flex;gap:8px;align-items:center}
+.adm-btn svg{width:16px;height:16px}
+.adm-btn[hidden]{display:none}
+.adm{position:fixed;top:0;right:0;z-index:50;height:100dvh;width:min(380px,100vw);background:rgba(13,15,42,.95);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-left:1px solid rgba(255,255,255,.12);color:#E9ECFA;font:300 13px/1.4 var(--body);transform:translateX(102%);visibility:hidden;transition:transform .35s var(--ease),visibility 0s .35s;display:flex;flex-direction:column;box-shadow:-20px 0 60px rgba(0,0,0,.35)}
+.adm.open{transform:none;visibility:visible;transition:transform .35s var(--ease)}
+.adm.left{right:auto;left:0;border-left:0;border-right:1px solid rgba(255,255,255,.12);transform:translateX(-102%);box-shadow:20px 0 60px rgba(0,0,0,.35)}
+.adm.left.open{transform:none}
+.adm-head-btns{display:flex;gap:8px}
+.adm-head{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.1)}
+.adm-title{font-size:16px;font-weight:500}
+.adm-close{border:1px solid rgba(255,255,255,.25);background:none;color:#fff;border-radius:8px;padding:6px 10px;font:500 13px var(--body);cursor:pointer}
+.adm-body{overflow:auto;flex:1;padding-bottom:40px;overscroll-behavior:contain}
+.adm details{border-bottom:1px solid rgba(255,255,255,.08)}
+.adm summary{cursor:pointer;padding:13px 18px;font-weight:500;font-size:14px;list-style:none;display:flex;justify-content:space-between}
+.adm summary::-webkit-details-marker{display:none}
+.adm summary::after{content:"+";color:#9AA3D6;font-weight:300}
+.adm details[open] summary::after{content:"–"}
+.adm-sec{padding:2px 18px 18px;display:grid;gap:13px}
+.adm-row{display:grid;grid-template-columns:1fr auto;gap:4px 10px;align-items:center}
+.adm-row input[type=range]{grid-column:1/-1;width:100%;accent-color:#EDC25E}
+.adm-row output{font-variant-numeric:tabular-nums;color:#9AA3D6;font-size:12px}
+.adm-color{grid-template-columns:1fr auto 80px}
+.adm-color input[type=color]{width:34px;height:26px;border:1px solid rgba(255,255,255,.25);border-radius:6px;background:none;padding:0;cursor:pointer}
+.adm input[type=text],.adm select,.adm textarea{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);color:#fff;border-radius:6px;padding:5px 7px;font:300 12px var(--body)}
+.adm select option{color:#141737}
+.adm-color input[type=text]{width:80px;text-transform:uppercase}
+.adm-sub{font-weight:500;color:#fff;margin-top:4px;padding-top:12px;border-top:1px dashed rgba(255,255,255,.14)}
+.adm-check{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.adm-check input{margin-top:2px;accent-color:#EDC25E;width:15px;height:15px;flex:none}
+.adm-btns{display:flex;flex-wrap:wrap;gap:8px}
+.adm .b{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:#fff;border-radius:8px;padding:8px 12px;font:500 13px var(--body);cursor:pointer}
+.adm .b:hover{background:rgba(255,255,255,.12)}
+.adm .b.primary{background:#EDC25E;color:#141737;border-color:#EDC25E}
+.adm textarea{width:100%;height:150px;resize:vertical;font:300 11px/1.45 ui-monospace,Menlo,monospace}
+.adm b{font-weight:500}
+.adm-note{color:#9AA3D6;font-size:12px}
+.adm-msg{color:#EDC25E;font-size:12px;min-height:1.2em}
+/* Textbearbeitung (admin) */
+.ted-bar{position:fixed;left:50%;top:14px;transform:translateX(-50%);z-index:45;display:none;align-items:center;gap:14px;background:#EDC25E;color:#141737;border-radius:999px;padding:8px 8px 8px 18px;font:500 13px var(--body);box-shadow:0 8px 30px rgba(0,0,0,.35)}
+.ted-btns{display:flex;gap:6px}
+.ted-bar button.alt{background:transparent;color:#141737;box-shadow:inset 0 0 0 1px #141737}
+.ted-bar button{border:0;border-radius:999px;background:#141737;color:#fff;font:500 13px var(--body);padding:6px 14px;cursor:pointer}
+body.textedit .ted-bar{display:flex}
+body.textedit [data-ed]{outline:1px dashed rgba(255,255,255,.4);outline-offset:3px;border-radius:2px;cursor:text}
+body.textedit [data-ed]:hover{outline-color:rgba(255,255,255,.9)}
+body.textedit [data-ed]:focus{outline:2px solid #EDC25E;outline-offset:3px}
+body.textedit td[data-ed],body.textedit th[data-ed]{outline-offset:-3px}
+body.textedit .bubble [data-ed]{outline-color:rgba(28,33,71,.45)}
+body.textedit .bubble [data-ed]:focus{outline-color:#141737}
+body.textedit [data-pop]{outline:1px dashed rgba(255,255,255,.5);outline-offset:2px;cursor:pointer}
+body.textedit .bubble{cursor:default}
+body.textedit #bars .hit{pointer-events:none}
+body.textedit #bars .val,body.textedit #bars .yr-lbl,body.textedit #sp .edl{cursor:pointer;text-decoration:underline dashed;text-underline-offset:2px}
+body.textedit #bars .val:hover,body.textedit #bars .yr-lbl:hover,body.textedit #sp .edl:hover{fill:#EDC25E}
+body.textedit #bars .bar,body.textedit #bars .val{opacity:1}
+.pop{position:absolute;z-index:70;display:flex;gap:8px;align-items:center;background:#0E1030;border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:6px 8px 6px 6px;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.pop[hidden]{display:none}
+.pop input{flex:1;min-width:0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:6px;color:#fff;font:300 14px var(--body);padding:6px 8px}
+.pop input:focus{outline:2px solid #EDC25E;outline-offset:0}
+.pop.err input{border-color:#FF8A7A;outline-color:#FF8A7A}
+.pop small{color:#9AA3D6;font-size:11px;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <span class="brand">Medartis Group</span>
+    <a class="jump" href="#results">Core vs. reported results</a>
+  </header>
+
+  <section class="hero" aria-label="Key figures 2025">
+    <h1><span class="t1">Key Financial Figures</span> <span class="yr">2025</span></h1>
+
+    <div class="field" id="field">
+      <div class="node hero-n" data-key="growth" style="--x:50.5%;--y:56.1%;--dn:33;--lx:0;--ly:0;--bd:0s;--ld:1s">
+        <div class="bubble gold" role="button" tabindex="0">
+          <span class="hero-top">Organic growth 2025</span>
+          <span class="num" style="font-size:9.4em"><span class="sign">+</span><span class="cnt" data-count="15.7" data-dec="1">15.7</span><small>%</small></span>
+          <span class="hero-sub">at constant exchange rates</span>
+          <span class="cap">in CHF: +12.0%</span>
+        </div>
+      </div>
+
+      <div class="node" data-key="sales" style="--x:26%;--y:23.2%;--dn:16;--lx:-9.5;--ly:-7.5;--bd:.15s;--ld:.95s">
+        <div class="bubble ice" role="button" tabindex="0" aria-describedby="l-sales">
+          <span class="num" style="font-size:4.3em"><span class="cnt" data-count="269.3" data-dec="1">269.3</span></span>
+          <span class="cap">2024: 224.8</span>
+        </div>
+        <div class="lbl r" id="l-sales" style="--lw:15">
+          <h3>Net sales</h3>
+          <div class="hl">in CHF million</div>
+          <p>Core sales CHF 266.1 Mio. EMEA was the best performing region and largest sales contributor.</p>
+        </div>
+      </div>
+
+      <div class="node" data-key="ebitda" style="--x:25.5%;--y:77.4%;--dn:18.8;--lx:-11;--ly:-5.5;--bd:.3s;--ld:1.05s">
+        <div class="bubble ice" role="button" tabindex="0" aria-describedby="l-ebitda">
+          <span class="num" style="font-size:5.4em"><span class="cnt" data-count="18.4" data-dec="1">18.4</span><small>%</small></span>
+          <span class="cap">2024: 19.0%</span>
+        </div>
+        <div class="lbl r" id="l-ebitda" style="--lw:14.5">
+          <h3>Core EBITDA margin</h3>
+          <p>Up 0.6 PP (CER), driven by cost discipline and volume leverage</p>
+        </div>
+      </div>
+
+      <div class="node" data-key="profit" style="--x:73.5%;--y:19.3%;--dn:14.2;--lx:8.5;--ly:-5.5;--bd:.45s;--ld:1.15s">
+        <div class="bubble ice" role="button" tabindex="0" aria-describedby="l-profit">
+          <span class="num" style="font-size:3.9em"><span class="pre">CHF</span><span class="cnt" data-count="6.1" data-dec="1">6.1</span><small>Mio</small></span>
+          <span class="cap">2024: 11.4</span>
+        </div>
+        <div class="lbl" id="l-profit" style="--lw:18">
+          <h3>Core net profit</h3>
+          <p>Decreased due to higher interest expenses and FX losses (strong CHF)</p>
+        </div>
+      </div>
+
+      <div class="node" data-key="people" style="--x:75%;--y:77.4%;--dn:18;--lx:10.5;--ly:-7;--bd:.6s;--ld:1.25s">
+        <div class="bubble ice" role="button" tabindex="0" aria-describedby="l-people">
+          <span class="num" style="font-size:4.9em"><span class="cnt" data-count="1337" data-dec="0" data-sep="1">1,337</span></span>
+          <span class="cap">employees</span>
+        </div>
+        <div class="lbl" id="l-people" style="--lw:14.5">
+          <h3>Headcount</h3>
+          <div class="hl">incl. acquisitions</div>
+          <p>Includes 198 new employees from NeoOrtho and 149 from KeriMedical</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="hint">Move the cursor through the figures, or tap one to focus it.</p>
+    <p class="foot1">Core figures exclude one-time, non-recurring and M&amp;A-related items. Organic growth at constant exchange rates (CER).</p>
+  </section>
+
+  <section class="results" id="results">
+    <div class="sec-head">
+      <h2><span class="t1">Core vs. reported results</span><span class="u">in CHF million, rounded</span></h2>
+      <div class="seg" role="group" aria-label="Highlight columns">
+        <span class="pill" aria-hidden="true"></span>
+        <button type="button" aria-pressed="true" data-hl="core">Highlight core</button>
+        <button type="button" aria-pressed="false" data-hl="rep">Highlight reported</button>
+      </div>
+    </div>
+
+    <div class="tablewrap" id="tbl" data-hl="core">
+      <table>
+        <thead>
+          <tr><th></th><th colspan="3">FY 2025</th><th colspan="3">FY 2024</th><th colspan="2">Organic growth of core business<sup>1</sup></th></tr>
+          <tr><th></th><th class="c-rep">Reported</th><th>Non-core items<sup>2</sup></th><th class="c-core">Core</th><th class="c-rep">Reported</th><th>Non-core items<sup>2</sup></th><th class="c-core">Core</th><th>in CHF</th><th>at CER</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Net sales</td><td class="c-rep">269.3</td><td>(3.2)</td><td class="c-core">266.1</td><td class="c-rep">224.8</td><td>(5.2)</td><td class="c-core">219.6</td><td class="up">▲ 12.0%</td><td class="up">▲ 15.7%</td></tr>
+          <tr><td>Gross profit</td><td class="c-rep">204.3</td><td>11.3</td><td class="c-core">215.6</td><td class="c-rep">178.7</td><td>3.1</td><td class="c-core">181.7</td><td></td><td></td></tr>
+          <tr><td>EBITDA</td><td class="c-rep">51.5</td><td>(2.6)</td><td class="c-core">48.8</td><td class="c-rep">48.0</td><td>(6.3)</td><td class="c-core">41.7</td><td></td><td></td></tr>
+          <tr><td>EBIT</td><td class="c-rep">26.0</td><td>(1.5)</td><td class="c-core">24.5</td><td class="c-rep">7.9</td><td>12.9</td><td class="c-core">20.8</td><td></td><td></td></tr>
+          <tr class="sep"><td>Net profit / loss</td><td class="c-rep">9.3</td><td>(3.2)</td><td class="c-core">6.1</td><td class="c-rep">3.5</td><td>7.9</td><td class="c-core">11.4</td><td></td><td></td></tr>
+          <tr class="sub"><td>Margins in % of sales</td><td class="c-rep"></td><td></td><td class="c-core"></td><td class="c-rep"></td><td></td><td class="c-core"></td><td colspan="2" class="pp">Core change in %-points (PP)</td></tr>
+          <tr><td>Gross profit</td><td class="c-rep">75.9%</td><td></td><td class="c-core">81.0%</td><td class="c-rep">79.5%</td><td></td><td class="c-core">82.8%</td><td class="down">▼ (1.7 PP)</td><td class="down">▼ (1.1 PP)</td></tr>
+          <tr><td>EBITDA</td><td class="c-rep">19.1%</td><td></td><td class="c-core">18.4%</td><td class="c-rep">21.4%</td><td></td><td class="c-core">19.0%</td><td class="down">▼ (0.6 PP)</td><td class="up">▲ 0.6 PP</td></tr>
+          <tr><td>EBIT</td><td class="c-rep">9.7%</td><td></td><td class="c-core">9.2%</td><td class="c-rep">3.5%</td><td></td><td class="c-core">9.5%</td><td class="down">▼ (0.2 PP)</td><td class="up">▲ 1.2 PP</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <p><sup>1</sup> Core figures exclude one-time, non-recurring and M&amp;A-related items; organic growth at constant exchange rates (CER), incl. acquired sales in the baseline.</p>
+      <p><sup>2</sup> NSI contract manufacturing and NeoOrtho's hip business (divested H2 2025) contributed CHF 3.2 million of revenue and are non-core.</p>
+    </div>
+
+    <div class="charts">
+      <div class="bars" id="bars">
+        <div class="chart" id="c-sales"><h3>Net sales</h3><div class="unit">in CHF million</div></div>
+        <div class="chart" id="c-gross"><h3>Gross profit margin</h3><div class="unit">Core, in %</div></div>
+        <div class="chart" id="c-ops"><h3>Operating margins</h3><div class="unit">EBITDA and EBIT, in %</div>
+          <div class="legend"><span><i style="background:var(--gold)"></i><span class="lt lt-e">EBITDA margin</span></span><span><i style="background:var(--ice)"></i><span class="lt lt-b">EBIT margin</span></span></div>
+        </div>
+        <div class="readout" id="readout" aria-live="polite"></div>
+      </div>
+
+      <div class="share" id="share">
+        <h3>Share price</h3>
+        <div class="unit">5-year relative development in CHF, rebased, Jan 2021 – Dec 2025</div>
+        <div class="series" role="group" aria-label="Focus a series">
+          <button type="button" data-s="med" aria-pressed="false"><b style="color:var(--ice)">+100%</b><span class="sn">Medartis</span></button>
+          <button type="button" data-s="eu" aria-pressed="false"><b style="color:var(--gold)">+72%</b><span class="sn">EURO STOXX 50 adjusted</span></button>
+          <button type="button" data-s="spi" aria-pressed="false"><b style="color:var(--silver)">+27%</b><span class="sn">SPI Extra adjusted</span></button>
+        </div>
+        <svg id="sp" viewBox="0 0 520 290" role="img" aria-label="Share price development 2021 to 2025: Medartis +100%, EURO STOXX 50 adjusted +72%, SPI Extra adjusted +27%"></svg>
+      </div>
+    </div>
+  </section>
+
+  <footer><span class="ft">2023–2025 margin figures marked with an asterisk are core figures.</span></footer>
+</div>
+
+<!-- ================= ADMIN PANEL ================= -->
+<button class="adm-btn" id="adm-btn" type="button" aria-controls="adm" aria-expanded="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+  Design anpassen
+</button>
+<div class="ted-bar" id="ted-bar" role="status">Textbearbeitung ist aktiv: Klicke auf einen Text oder eine Zahl.<span class="ted-btns"><button type="button" id="ted-panel" class="alt">Einstellungen</button><button type="button" id="ted-done">Fertig</button></span></div>
+<div class="pop" id="pop" hidden><input type="text" aria-label="Neuer Wert"><small></small></div>
+<aside class="adm" id="adm" aria-label="Design-Einstellungen">
+  <div class="adm-head">
+    <div class="adm-title">Design anpassen</div>
+    <div class="adm-head-btns"><button class="adm-close" id="adm-side" type="button" title="Panel auf die andere Seite verschieben">Andere Seite</button><button class="adm-close" id="adm-close" type="button">Schliessen</button></div>
+  </div>
+  <div class="adm-body" id="adm-body"></div>
+</aside>
+
+<script>
+/* Unveränderte Kopie der Seite – wird beim «Als HTML-Datei speichern» verwendet */
+const PRISTINE = document.documentElement.outerHTML;
+document.documentElement.classList.add('js');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const mobile = () => matchMedia('(max-width:720px)').matches;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* ================= EINSTELLUNGEN ================= */
+const DEFAULTS = {
+  colors:{night:'#10133A',deep:'#1B2370',blue:'#3044B4',gold:'#EDC25E',goldDeep:'#C9962F',ice:'#C6DDF3',iceDeep:'#8FB3DE',ink:'#1C2147',mist:'#B9C4EA',silver:'#E6E9F5',pos:'#B6F0C8',neg:'#FFC9A8'},
+  bgAngle:118, glow:.55,
+  h1Size:1, h1Wght:500, h1Track:-.02,
+  numWght:500, textSize:1,
+  bubbleScale:1, gloss:42, shadow:.55, dim:.45,
+  bubbles:{
+    growth:{x:50.5,y:56.1,k:1,color:'gold',lx:0,ly:0},
+    sales:{x:26,y:23.2,k:1,color:'ice',lx:-9.5,ly:-7.5},
+    ebitda:{x:25.5,y:77.4,k:1,color:'ice',lx:-11,ly:-5.5},
+    profit:{x:73.5,y:19.3,k:1,color:'ice',lx:8.5,ly:-5.5},
+    people:{x:75,y:77.4,k:1,color:'ice',lx:10.5,ly:-7}
+  },
+  float:true, floatAmp:1, floatSpeed:1, repel:2.2, repelRadius:1.45, countDur:1600,
+  rowPad:9, barWidth:.62, barRadius:1.5, lineWidth:1, areaOpacity:.32, chartDur:1,
+  maxW:1240, secGap:48,
+  /* Diagrammwerte (im Bearbeitungsmodus direkt anklickbar) */
+  data:{
+    years:['2021','2022','2023','2024','2025'],
+    sales:[159.9,182.8,212.0,224.8,269.3],
+    gross:[83.9,81.9,82.9,82.8,81.0],
+    ebitda:[17.2,12.8,17.1,19.0,18.4],
+    ebit:[6.9,2.9,6.1,9.5,9.2],
+    ends:{med:'88',eu:'75',spi:'56',peak:'146'}
+  },
+  hideAdmin:false
+};
+const clone = o => JSON.parse(JSON.stringify(o));
+function merge(a,b){
+  for(const k in b){
+    if(b[k] && typeof b[k]==='object' && !Array.isArray(b[k]) && a[k] && typeof a[k]==='object') merge(a[k],b[k]);
+    else if(k in a) a[k]=b[k];
+  }
+  return a;
+}
+const cut = w => (+w >= 400 ? 500 : 300);
+function normalise(s){ s._edit = false; s._text = false; s.h1Wght = cut(s.h1Wght); s.numWght = cut(s.numWght); return s; }
+let EMBEDDED = {};
+try{ EMBEDDED = JSON.parse(document.getElementById('design-settings').textContent || '{}'); }catch(e){}
+let S = normalise(merge(clone(DEFAULTS), EMBEDDED));
+const LOADED = clone(S);
+
+const field = document.getElementById('field');
+const nodes = [...field.querySelectorAll('.node')];
+const rootStyle = document.documentElement.style;
+
+function applyNode(n){
+  const b = S.bubbles[n.dataset.key];
+  n.style.setProperty('--x', b.x + '%');
+  n.style.setProperty('--y', b.y + '%');
+  n.style.setProperty('--k', b.k);
+  n.style.setProperty('--lx', b.lx);
+  n.style.setProperty('--ly', b.ly);
+  const bub = n.querySelector('.bubble');
+  bub.classList.toggle('gold', b.color === 'gold');
+  bub.classList.toggle('ice', b.color !== 'gold');
+}
+function apply(){
+  const c = S.colors;
+  const cmap = {night:'--night',deep:'--deep',blue:'--blue',gold:'--gold',goldDeep:'--gold-deep',ice:'--ice',iceDeep:'--ice-deep',ink:'--ink',mist:'--mist',silver:'--silver',pos:'--pos',neg:'--neg'};
+  for(const k in cmap) rootStyle.setProperty(cmap[k], c[k]);
+  const v = {'--bg-angle':S.bgAngle,'--glow':S.glow,'--h1k':S.h1Size,'--h1-wght':S.h1Wght,'--h1-track':S.h1Track+'em',
+    '--num-wght':S.numWght,'--tk':S.textSize,'--bk':S.bubbleScale,'--gloss':S.gloss+'%','--shadow':S.shadow,'--dim':S.dim,
+    '--row-pad':S.rowPad,'--line-k':S.lineWidth,'--area-op':S.areaOpacity,'--chart-dur':S.chartDur,'--maxw':S.maxW,'--sec-gap':S.secGap};
+  for(const k in v) rootStyle.setProperty(k, v[k]);
+  nodes.forEach(applyNode);
+  field.classList.toggle('editing', !!S._edit);
+  movePill(document.querySelector('.seg [aria-pressed="true"]'));
+}
+const busy = () => S._edit || S._text;
+
+/* ================= ZAHLEN ================= */
+function fmtCount(e, v){
+  const dec = +e.dataset.dec || 0;
+  if(e.dataset.sep) return Number(v).toLocaleString('en-US', {minimumFractionDigits:dec, maximumFractionDigits:dec});
+  return Number(v).toFixed(dec);
+}
+/* Liest «1,337», «212.5», «212,5», «+15.7%» usw. */
+function parseNum(str){
+  const raw = String(str).trim();
+  let s = raw.replace(/[\s'’]/g,'').replace(/%$/,'');
+  if(/^[+-]?\d{1,3}(,\d{3})+(\.\d+)?$/.test(s)) s = s.replace(/,/g,'');
+  else if(/^[+-]?\d+,\d+$/.test(s)) s = s.replace(',', '.');
+  if(!/^[+-]?\d+(\.\d+)?$/.test(s)) return null;
+  return {v:parseFloat(s), dec:(s.split('.')[1] || '').length, sep:/\d,\d{3}/.test(raw)};
+}
+let countRun = 0;
+function countUp(){
+  const run = ++countRun;
+  document.querySelectorAll('.cnt[data-count]').forEach((c,i)=>{
+    const end = +c.dataset.count, num = c.closest('.num');
+    const clear = () => { if(num) num.style.fontWeight = ''; };
+    const dur = S.countDur;
+    if(reduce || dur <= 0){ c.textContent = fmtCount(c, end); clear(); return; }
+    const delay = 250 + i*90; let t0 = null;
+    const step = ts => {
+      if(run !== countRun) return;
+      if(t0 === null) t0 = ts + delay;
+      const p = Math.min(Math.max((ts - t0)/dur, 0), 1), e = 1 - Math.pow(1-p, 4);
+      c.textContent = fmtCount(c, end*e);
+      if(num){ if(p < 1) num.style.fontWeight = e < .85 ? 300 : S.numWght; else clear(); }
+      if(p < 1) requestAnimationFrame(step);
+    };
+    c.textContent = fmtCount(c, 0);
+    requestAnimationFrame(step);
+  });
+}
+function finishCount(){
+  countRun++;
+  document.querySelectorAll('.cnt[data-count]').forEach(c=>{ c.textContent = fmtCount(c, c.dataset.count); const n = c.closest('.num'); if(n) n.style.fontWeight = ''; });
+}
+function replay(){
+  if(S._text) return;
+  field.classList.add('noanim');
+  field.classList.remove('ready');
+  void field.offsetWidth;
+  field.classList.remove('noanim');
+  requestAnimationFrame(()=>{ field.classList.add('ready'); countUp(); });
+}
+
+/* ================= BUBBLES: Schweben + Ausweichen ================= */
+const state = nodes.map((n,i)=>({n,ox:0,oy:0,vx:0,vy:0,ph:i*1.7}));
+const mouse = {x:-1e4,y:-1e4};
+field.addEventListener('pointermove', e=>{ const r = field.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
+field.addEventListener('pointerleave', ()=>{ mouse.x = mouse.y = -1e4; });
+let last = performance.now(), clock = 0;
+function tick(t){
+  const dt = Math.min(t - last, 50); last = t; clock += dt * S.floatSpeed;
+  if(!mobile() && !reduce && !busy()){
+    const W = field.clientWidth, amp = S.float ? W*0.006*S.floatAmp : 0, lim = W*0.025*Math.max(1, S.floatAmp);
+    state.forEach(s=>{
+      const b = s.n.querySelector('.bubble');
+      const hx = s.n.offsetLeft, hy = s.n.offsetTop, rad = b.offsetWidth/2;
+      const tx = Math.sin(clock/2400 + s.ph)*amp, ty = Math.cos(clock/3100 + s.ph*1.3)*amp;
+      let fx = (tx - s.ox)*0.03, fy = (ty - s.oy)*0.03;
+      const dx = hx + s.ox - mouse.x, dy = hy + s.oy - mouse.y, d = Math.hypot(dx,dy), R = rad*S.repelRadius;
+      if(d < R && d > 0){ const k = (1 - d/R)*S.repel; fx += dx/d*k; fy += dy/d*k; }
+      s.vx = (s.vx + fx)*0.86; s.vy = (s.vy + fy)*0.86; s.ox += s.vx; s.oy += s.vy;
+      s.ox = Math.max(-lim, Math.min(lim, s.ox)); s.oy = Math.max(-lim, Math.min(lim, s.oy));
+      s.n.style.transform = `translate(${s.ox.toFixed(2)}px,${s.oy.toFixed(2)}px)`;
+    });
+  } else {
+    state.forEach(s=>{ s.ox = s.oy = s.vx = s.vy = 0; s.n.style.transform = ''; });
+  }
+  requestAnimationFrame(tick);
+}
+
+/* Hervorheben */
+function setOn(node){ nodes.forEach(n=>n.classList.toggle('on', n===node)); field.classList.toggle('dim', !!node); }
+nodes.forEach(n=>{
+  const b = n.querySelector('.bubble');
+  n.addEventListener('pointerenter', ()=>{ if(!mobile() && !busy()) setOn(n); });
+  n.addEventListener('pointerleave', ()=>{ if(!mobile()) setOn(null); });
+  b.addEventListener('focus', ()=>{ if(!busy()) setOn(n); });
+  b.addEventListener('blur', ()=>setOn(null));
+  b.addEventListener('click', ()=>{ if(busy()) return; setOn(n.classList.contains('on') && mobile() ? null : n); });
+  b.addEventListener('keydown', e=>{ if(busy() || e.target !== b) return; if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); b.click(); } });
+});
+
+/* Verschieben im Bearbeitungsmodus */
+let drag = null;
+const r1 = v => Math.round(v*10)/10;
+field.addEventListener('pointerdown', e=>{
+  if(!S._edit || mobile()) return;
+  const node = e.target.closest('.node'); if(!node) return;
+  const isLbl = !!e.target.closest('.lbl');
+  e.preventDefault();
+  const r = field.getBoundingClientRect(), b = S.bubbles[node.dataset.key];
+  drag = {node, b, isLbl, sx:e.clientX, sy:e.clientY, x0:b.x, y0:b.y, lx0:b.lx, ly0:b.ly, W:r.width, H:r.height,
+          el: isLbl ? node.querySelector('.lbl') : node.querySelector('.bubble')};
+  drag.el.classList.add('dragging');
+  field.setPointerCapture(e.pointerId);
+});
+field.addEventListener('pointermove', e=>{
+  if(!drag) return;
+  const dx = e.clientX - drag.sx, dy = e.clientY - drag.sy;
+  if(drag.isLbl){ drag.b.lx = r1(drag.lx0 + dx/drag.W*100); drag.b.ly = r1(drag.ly0 + dy/drag.W*100); }
+  else { drag.b.x = r1(drag.x0 + dx/drag.W*100); drag.b.y = r1(drag.y0 + dy/drag.H*100); }
+  applyNode(drag.node);
+});
+const endDrag = ()=>{ if(drag){ drag.el.classList.remove('dragging'); drag = null; } };
+field.addEventListener('pointerup', endDrag);
+field.addEventListener('pointercancel', endDrag);
+function resetPositions(){
+  for(const k in S.bubbles){ const d = DEFAULTS.bubbles[k]; Object.assign(S.bubbles[k], {x:d.x,y:d.y,lx:d.lx,ly:d.ly}); }
+  apply();
+}
+
+/* ================= TABELLE ================= */
+const seg = document.querySelector('.seg'), pill = seg.querySelector('.pill'), tbl = document.getElementById('tbl');
+function movePill(btn){ if(!btn) return; pill.style.width = btn.offsetWidth + 'px'; pill.style.transform = `translateX(${btn.offsetLeft - 4}px)`; }
+seg.querySelectorAll('button').forEach(btn=>btn.addEventListener('click', ()=>{
+  seg.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed', b===btn));
+  tbl.dataset.hl = btn.dataset.hl; movePill(btn);
+}));
+addEventListener('load', ()=>movePill(seg.querySelector('[aria-pressed="true"]')));
+addEventListener('resize', ()=>movePill(seg.querySelector('[aria-pressed="true"]')));
+
+/* ================= BALKENDIAGRAMME ================= */
+const NS = 'http://www.w3.org/2000/svg';
+const el = (tag, attrs, parent) => { const e = document.createElementNS(NS, tag); for(const k in attrs) e.setAttribute(k, attrs[k]); parent && parent.appendChild(e); return e; };
+const SERIES_COLOR = {sales:'--gold', gross:'--ice', ebitda:'--gold', ebit:'--ice'};
+function barChart(host, keys, {max, star}){
+  const D = S.data, W = 220, H = 190, top = 18, bottom = 24, ch = H - top - bottom, gw = W/5;
+  const scale = Math.max(max, ...keys.flatMap(k=>D[k]).map(v=>v*1.12));
+  const svg = el('svg', {viewBox:`0 0 ${W} ${H}`, 'aria-hidden':'true'}, host);
+  el('line', {x1:0, x2:W, y1:H-bottom+.5, y2:H-bottom+.5, style:'stroke:color-mix(in srgb,var(--mist) 40%,transparent)'}, svg);
+  D.years.forEach((y,i)=>{
+    const g = el('g', {class:'grp','data-i':i}, svg);
+    const n = keys.length, bw = n > 1 ? gw*S.barWidth*0.55 : gw*S.barWidth, gx = i*gw + (gw - bw*n - (n-1)*3)/2;
+    keys.forEach((k,j)=>{
+      const v = D[k][i], h = Math.max(0, v)/scale*ch, x = gx + j*(bw+3), yy = H - bottom - h;
+      const r = el('rect', {class:'bar', x, y:yy, width:bw, height:h, rx:Math.min(S.barRadius, bw/2), style:`fill:var(${SERIES_COLOR[k]})`}, g);
+      r.style.transitionDelay = (i*80 + j*40) + 'ms';
+      el('text', {class:'val', x:x+bw/2, y:yy-5, 'text-anchor':'middle', 'font-size': n > 1 ? 9 : 11, 'data-k':k, 'data-i':i}, g).textContent = Number(v).toFixed(1);
+    });
+    el('text', {class:'yr-lbl', x:i*gw+gw/2, y:H-7, 'text-anchor':'middle', 'data-i':i}, g).textContent = y + (star && i > 1 ? '*' : '');
+    el('rect', {class:'hit', x:i*gw, y:0, width:gw, height:H, tabindex:0, 'aria-label':y}, g);
+  });
+}
+const bars = document.getElementById('bars'), readout = document.getElementById('readout');
+const lastYear = () => S.data.years.length - 1;
+function showYear(i, pin){
+  const D = S.data, t = q => esc(document.querySelector(q).textContent.trim()), f = v => Number(v).toFixed(1);
+  readout.innerHTML = `<span class="y">${esc(D.years[i])}</span>`
+    + `<span class="ri">${t('#c-sales h3')} <b>CHF ${f(D.sales[i])} Mio</b></span>`
+    + `<span class="ri">${t('#c-gross h3')} <b>${f(D.gross[i])}%</b></span>`
+    + `<span class="ri">${t('#c-ops .lt-e')} <b>${f(D.ebitda[i])}%</b></span>`
+    + `<span class="ri">${t('#c-ops .lt-b')} <b>${f(D.ebit[i])}%</b></span>`
+    + (i > 1 ? '<span class="ri">(core)</span>' : '');
+  if(pin === false){ delete bars.dataset.year; bars.querySelectorAll('.grp').forEach(g=>g.classList.remove('sel')); return; }
+  bars.dataset.year = i;
+  bars.querySelectorAll('.grp').forEach(g=>g.classList.toggle('sel', +g.dataset.i === i));
+}
+function renderBars(){
+  [['c-sales',['sales'],{max:290}],
+   ['c-gross',['gross'],{max:100,star:true}],
+   ['c-ops',['ebitda','ebit'],{max:22,star:true}]
+  ].forEach(([id,k,o])=>{ const h = document.getElementById(id); const old = h.querySelector('svg'); if(old) old.remove(); barChart(h,k,o); });
+  const ops = document.getElementById('c-ops'); ops.appendChild(ops.querySelector('.legend'));
+  bars.querySelectorAll('.hit').forEach(h=>{
+    const i = +h.parentNode.dataset.i;
+    h.addEventListener('pointerenter', ()=>showYear(i));
+    h.addEventListener('focus', ()=>showYear(i));
+  });
+  showYear(lastYear(), false);
+}
+bars.addEventListener('pointerleave', ()=>showYear(lastYear(), false));
+bars.addEventListener('focusout', e=>{ if(!bars.contains(e.relatedTarget)) showYear(lastYear(), false); });
+
+/* ================= AKTIENKURS =================
+   ACHTUNG: Die Kurven sind eine angenäherte Nachzeichnung der gedruckten Grafik
+   (Start 44, Endwerte 88 / 75 / 56, Spitze 146). Vor einer Veröffentlichung durch
+   echte Kursdaten ersetzen: SHARE = {med:[...], eu:[...], spi:[...]} mit gleich vielen Werten. */
+function rng(seed){ return ()=>((seed = Math.imul(seed ^ seed>>>15, 1|seed) + 0x6D2B79F5|0)>>>0)/4294967296*2-1; }
+function path(anchors, vol, seed, n=420){
+  const r = rng(seed), out = [], noise = []; let acc = 0;
+  for(let i=0;i<n;i++){ acc += r()*vol; noise.push(acc); }
+  const t = i => 2021 + 5*i/(n-1);
+  const interp = (xs,ys,x)=>{ for(let k=0;k<xs.length-1;k++){ if(x <= xs[k+1]){ const f = (x-xs[k])/(xs[k+1]-xs[k]); return ys[k] + (ys[k+1]-ys[k])*f; } } return ys[ys.length-1]; };
+  const ax = anchors.map(a=>a[0]), ay = anchors.map(a=>a[1]);
+  const anIdx = ax.map(x=>Math.round((x-2021)/5*(n-1))), anN = anIdx.map(i=>noise[i]);
+  for(let i=0;i<n;i++) out.push(interp(ax,ay,t(i)) + noise[i] - interp(anIdx,anN,i));
+  return out;
+}
+const SHARE = {
+  med:path([[2021,44],[2021.5,70],[2021.9,100],[2022.3,146],[2022.6,95],[2022.9,82],[2023.1,98],[2023.6,72],[2024,85],[2024.5,82],[2024.9,62],[2025.1,58],[2025.4,72],[2025.8,85],[2026,88]],2.2,11),
+  eu:path([[2021,44],[2022,52],[2022.8,46],[2023.5,56],[2024.5,63],[2025.1,58],[2025.5,66],[2026,75]],.7,23),
+  spi:path([[2021,44],[2021.8,50],[2022.8,42],[2023.8,44],[2024.6,48],[2025.2,46],[2026,56]],.6,37)
+};
+const sp = document.getElementById('sp');
+const shareYearEls = [], shareEndEls = {};
+function updateShareLabels(){
+  shareYearEls.forEach((t,i)=>{ t.textContent = S.data.years[i] ?? ''; });
+  for(const k in shareEndEls) shareEndEls[k].textContent = S.data.ends[k];
+}
+(function(){
+  const W = 520, H = 290, L = 34, R = 40, T = 16, B = 26, pw = W-L-R, ph = H-T-B;
+  const X = i => L + i/(SHARE.med.length-1)*pw, Y = v => T + ph - (v/160)*ph;
+  [0,40,80,120,160].forEach(v=>{ el('line',{class:'grid',x1:L,x2:W-R,y1:Y(v),y2:Y(v)},sp); el('text',{class:'axis',x:L-8,y:Y(v)+4,'text-anchor':'end'},sp).textContent = v; });
+  for(let i=0;i<5;i++) shareYearEls.push(el('text',{class:'axis',x:L+i/5*pw,y:H-6},sp));
+  const d = a => a.map((v,i)=>(i?'L':'M') + X(i).toFixed(1) + ' ' + Y(v).toFixed(1)).join('');
+  const defs = el('defs',{},sp), lg = el('linearGradient',{id:'area',x1:0,y1:0,x2:0,y2:1},defs);
+  el('stop',{offset:0,style:'stop-color:var(--ice);stop-opacity:var(--area-op)'},lg);
+  el('stop',{offset:1,style:'stop-color:var(--ice);stop-opacity:0'},lg);
+  const area = el('path',{d:d(SHARE.med)+`L${X(SHARE.med.length-1)} ${Y(0)}L${X(0)} ${Y(0)}Z`,fill:'url(#area)',class:'line med'},sp);
+  area.style.stroke = 'none';
+  const cfg = [['spi','--silver',1.1],['eu','--gold',1.3],['med','--ice',1.7]];
+  const lines = cfg.map(([k,c,w])=>el('path',{class:'line '+k,d:d(SHARE[k]),style:`stroke:var(${c});stroke-width:calc(var(--line-k) * ${w}px)`},sp));
+  const endY = {med:88,eu:75,spi:56}, cols = {med:'--ice',eu:'--gold',spi:'--silver'};
+  Object.keys(endY).forEach(k=>{
+    const g = el('g',{class:'end '+k},sp);
+    el('circle',{cx:X(SHARE[k].length-1),cy:Y(endY[k]),r:3.2,style:`fill:var(${cols[k]})`},g);
+    shareEndEls[k] = el('text',{class:'edl','data-end':k,x:W-R+8,y:Y(endY[k])+4,style:`fill:var(${cols[k]})`,'font-size':12,'font-weight':500,'font-family':'Roboto'},g);
+  });
+  const ip = SHARE.med.indexOf(Math.max(...SHARE.med));
+  const pk = el('g',{class:'end med'},sp);
+  el('circle',{cx:X(ip),cy:Y(146),r:4,fill:'#fff',style:'stroke:var(--ice)','stroke-width':2},pk);
+  shareEndEls.peak = el('text',{class:'edl','data-end':'peak',x:X(ip),y:Y(146)-10,'text-anchor':'middle',fill:'#fff','font-size':12,'font-weight':500,'font-family':'Roboto'},pk);
+  updateShareLabels();
+  lines.forEach((p,i)=>{ const len = p.getTotalLength(); p.style.strokeDasharray = len; p.style.strokeDashoffset = reduce ? 0 : len; p.style.transition = `stroke-dashoffset 2.2s cubic-bezier(.3,.7,.2,1) ${i*.25}s, opacity .35s`; });
+  area.style.opacity = 0; area.style.transition = 'opacity 1.2s ease 1.6s';
+  sp._draw = ()=>{ lines.forEach(p=>p.style.strokeDashoffset = 0); area.style.opacity = 1; };
+  const share = document.getElementById('share');
+  share.querySelectorAll('.series button').forEach(b=>b.addEventListener('click', ()=>{
+    const on = b.getAttribute('aria-pressed') !== 'true';
+    share.querySelectorAll('.series button').forEach(x=>x.setAttribute('aria-pressed', x===b && on));
+    share.querySelectorAll('.line,.end').forEach(x=>x.classList.toggle('f', on && x.classList.contains(b.dataset.s)));
+    if(on) share.dataset.focus = b.dataset.s; else delete share.dataset.focus;
+  }));
+})();
+
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting) return;
+  if(e.target.id === 'bars') e.target.classList.add('inview');
+  if(e.target.id === 'share') sp._draw();
+  io.unobserve(e.target);
+}), {threshold:.35});
+
+/* ================= TEXTE DIREKT BEARBEITEN ================= */
+/* Diese Elemente sind im Bearbeitungsmodus direkt beschreibbar */
+const ED_SEL = ['.brand','.jump','h1 .t1','h1 .yr','.hero-top','.num > span','.num > small','.hero-sub','.bubble .cap',
+  '.lbl h3','.lbl .hl','.lbl p','.hint','.foot1','h2 .t1','h2 .u','th','td','.notes p',
+  '.chart h3','.chart .unit','.legend .lt','.share h3','.share .unit','footer .ft'].join(',');
+/* Diese Texte sitzen in Schaltflächen und werden über ein kleines Eingabefeld geändert */
+const POP_SEL = ['.seg button','.series b','.series .sn'].join(',');
+const editables = d => [...d.querySelector('.wrap').querySelectorAll(ED_SEL + ',' + POP_SEL)];
+const edEls = [...document.querySelector('.wrap').querySelectorAll(ED_SEL)];
+document.querySelector('.wrap').querySelectorAll(POP_SEL).forEach(e=>e.dataset.pop = '');
+const plainOK = (()=>{ const d = document.createElement('div'); try{ d.contentEditable = 'plaintext-only'; }catch(e){ return false; } return d.contentEditable === 'plaintext-only'; })();
+
+function edCommit(e){
+  const t = e.target;
+  if(t.innerHTML === '<br>') t.innerHTML = '';
+  if(t.classList.contains('cnt')){
+    const p = parseNum(t.textContent);
+    if(p){
+      const hadSep = t.hasAttribute('data-sep');
+      t.dataset.count = p.v; t.dataset.dec = p.dec;
+      if(p.sep || (hadSep && Math.abs(p.v) >= 1000)) t.dataset.sep = '1'; else delete t.dataset.sep;
+      t.textContent = fmtCount(t, p.v);
+    } else { delete t.dataset.count; delete t.dataset.dec; delete t.dataset.sep; }
+  }
+  if(t.tagName === 'TD'){ const s = t.textContent; t.classList.toggle('up', /▲/.test(s)); t.classList.toggle('down', /▼/.test(s)); }
+  showYear(lastYear(), false);
+  movePill(seg.querySelector('[aria-pressed="true"]'));
+}
+edEls.forEach(e=>{
+  e.dataset.ed = '';
+  e.addEventListener('blur', edCommit);
+  e.addEventListener('keydown', ev=>{
+    if(!S._text) return;
+    if(ev.key === 'Enter' || ev.key === 'Escape'){ ev.preventDefault(); ev.stopPropagation(); e.blur(); }
+  });
+  e.addEventListener('paste', ev=>{
+    if(!S._text || plainOK) return;
+    ev.preventDefault();
+    document.execCommand('insertText', false, (ev.clipboardData || window.clipboardData).getData('text/plain').replace(/\s*\n\s*/g,' '));
+  });
+});
+
+function setTextMode(on){
+  S._text = on;
+  closePop(true);
+  if(on){
+    S._edit = false; finishCount(); setOn(null);
+    adm.classList.remove('open'); admBtn.setAttribute('aria-expanded', false);
+    field.classList.add('ready'); bars.classList.add('inview'); sp._draw();
+  } else if(document.activeElement && document.activeElement.hasAttribute('data-ed')) document.activeElement.blur();
+  edEls.forEach(e=>{ e.contentEditable = on ? (plainOK ? 'plaintext-only' : 'true') : 'false'; e.spellcheck = false; });
+  document.body.classList.toggle('textedit', on);
+  apply();
+  controls.forEach(f=>f());
+}
+
+/* Kleines Eingabefeld für Diagrammwerte und Schaltflächen */
+const pop = document.getElementById('pop'), popIn = pop.querySelector('input'), popHint = pop.querySelector('small');
+let popCb = null;
+function openPop(target, value, cb, numeric){
+  closePop(true);
+  const r = target.getBoundingClientRect(), w = Math.max(150, r.width + 60);
+  popCb = {cb, numeric};
+  pop.classList.remove('err'); pop.hidden = false;
+  popIn.value = value;
+  popHint.textContent = numeric ? 'Zahl, Enter' : 'Enter';
+  pop.style.width = w + 'px';
+  pop.style.left = (scrollX + Math.min(innerWidth - w - 10, Math.max(10, r.left + r.width/2 - w/2))) + 'px';
+  pop.style.top = (scrollY + (r.top > 60 ? r.top - 50 : r.bottom + 8)) + 'px';
+  popIn.focus(); popIn.select();
+}
+function closePop(save){
+  if(pop.hidden || !popCb) return true;
+  if(save){
+    let v = popIn.value.trim();
+    if(popCb.numeric){
+      const p = parseNum(v);
+      if(!p){ pop.classList.add('err'); return false; }
+      v = p.v;
+    }
+    const c = popCb; popCb = null; pop.hidden = true; c.cb(v);
+  } else { popCb = null; pop.hidden = true; }
+  return true;
+}
+popIn.addEventListener('keydown', e=>{
+  if(e.key === 'Enter'){ e.preventDefault(); closePop(true); }
+  if(e.key === 'Escape'){ e.preventDefault(); e.stopPropagation(); closePop(false); }
+});
+popIn.addEventListener('blur', ()=>{ setTimeout(()=>{ if(!closePop(true)) closePop(false); }, 0); });
+
+document.addEventListener('click', e=>{
+  if(!S._text) return;
+  const t = e.target;
+  if(t.closest('#adm, #pop, #adm-btn, .ted-bar')) return;
+  if(t.closest('.wrap a')) e.preventDefault();
+  const val = t.closest('#bars .val');
+  if(val){ e.stopPropagation(); const k = val.dataset.k, i = +val.dataset.i;
+    openPop(val, String(S.data[k][i]), v=>{ S.data[k][i] = v; renderBars(); }, true); return; }
+  const yl = t.closest('#bars .yr-lbl');
+  if(yl){ e.stopPropagation(); const i = +yl.dataset.i;
+    openPop(yl, S.data.years[i], v=>{ S.data.years[i] = v; renderBars(); updateShareLabels(); }); return; }
+  const end = t.closest('#sp .edl');
+  if(end){ e.stopPropagation(); const k = end.dataset.end;
+    openPop(end, S.data.ends[k], v=>{ S.data.ends[k] = v; updateShareLabels(); }); return; }
+  const pb = t.closest('[data-pop]');
+  if(pb){ e.preventDefault(); e.stopPropagation();
+    openPop(pb, pb.textContent.trim(), v=>{ pb.textContent = v; movePill(seg.querySelector('[aria-pressed="true"]')); }); return; }
+  if(t.closest('.seg button, .series button')){ e.preventDefault(); e.stopPropagation(); }
+}, true);
+
+/* Texte von einer Seite auf die andere übertragen (Speichern / Verwerfen) */
+function copyTexts(from, to){
+  const a = editables(from), b = editables(to);
+  if(a.length !== b.length) return false;
+  a.forEach((src,i)=>{
+    const dst = b[i];
+    if(src.classList.contains('cnt')){
+      ['data-count','data-dec','data-sep'].forEach(k=>{ if(src.hasAttribute(k)) dst.setAttribute(k, src.getAttribute(k)); else dst.removeAttribute(k); });
+      dst.textContent = src.hasAttribute('data-count') ? fmtCount(src, src.dataset.count) : src.textContent;
+    } else {
+      const h = src.innerHTML; dst.innerHTML = h === '<br>' ? '' : h;
+    }
+    if(src.tagName === 'TD'){ dst.classList.toggle('up', src.classList.contains('up')); dst.classList.toggle('down', src.classList.contains('down')); }
+  });
+  return true;
+}
+
+/* ================= ADMIN PANEL ================= */
+const adm = document.getElementById('adm'), admBtn = document.getElementById('adm-btn'), admBody = document.getElementById('adm-body');
+const getP = p => p.split('.').reduce((o,k)=>o[k], S);
+const setP = (p,v) => { const ks = p.split('.'), last = ks.pop(); ks.reduce((o,k)=>o[k], S)[last] = v; };
+const BUBBLE_NAMES = [['growth','Wachstum (grosse Bubble)'],['sales','Net sales'],['ebitda','EBITDA-Marge'],['profit','Nettogewinn'],['people','Mitarbeitende']];
+const SCHEMA = [
+  {t:'Texte und Zahlen', open:true, items:[
+    ['check','_text','Texte und Zahlen direkt auf der Seite bearbeiten', ()=>setTextMode(S._text)],
+    ['note','Das Panel blendet sich dabei aus, damit du die ganze Seite siehst. Klicke auf einen Text oder eine Zahl und tippe. Mit Enter oder einem Klick daneben ist die Eingabe fertig. Mit «Fertig» im gelben Balken oben beendest du die Bearbeitung.'],
+    ['note','Diagramme und Schaltflächen: Klicke auf einen Balkenwert, eine Jahreszahl, einen Wert beim Aktienkurs oder eine Beschriftung auf einem Button. Es öffnet sich ein kleines Eingabefeld.'],
+    ['note','In der Tabelle färben die Zeichen ▲ und ▼ einen Wert automatisch als positiv oder negativ.']
+  ]},
+  {t:'Farben', items:[
+    ['color','colors.night','Hintergrund dunkel'],
+    ['color','colors.deep','Hintergrund Mitte'],
+    ['color','colors.blue','Hintergrund hell'],
+    ['color','colors.gold','Gold'],
+    ['color','colors.goldDeep','Gold, Schattierung'],
+    ['color','colors.ice','Eisblau'],
+    ['color','colors.iceDeep','Eisblau, Schattierung'],
+    ['color','colors.ink','Schrift auf den Bubbles'],
+    ['color','colors.mist','Beschreibungstexte'],
+    ['color','colors.silver','Linie SPI Extra'],
+    ['color','colors.pos','Positive Werte (Tabelle)'],
+    ['color','colors.neg','Negative Werte (Tabelle)']
+  ]},
+  {t:'Hintergrund', items:[
+    ['range','bgAngle','Winkel des Farbverlaufs',0,360,1,'°'],
+    ['range','glow','Leuchten unten rechts',0,1,.05,'']
+  ]},
+  {t:'Schrift', items:[
+    ['range','h1Size','Titel: Grösse',.6,1.4,.01,'×'],
+    ['select','h1Wght','Titel: Schnitt',[['500','Roboto Medium'],['300','Roboto Light']]],
+    ['range','h1Track','Titel: Zeichenabstand',-.06,.04,.005,' em'],
+    ['select','numWght','Zahlen: Schnitt',[['500','Roboto Medium'],['300','Roboto Light']]],
+    ['range','textSize','Texte neben den Bubbles',.8,1.4,.01,'×'],
+    ['note','Die Seite verwendet nur zwei Schnitte: Roboto Medium für Titel, Zahlen und Hervorhebungen, Roboto Light für alle übrigen Texte.']
+  ]},
+  {t:'Bubbles', items:[
+    ['check','_edit','Bubbles und Texte mit der Maus verschieben', ()=>{ if(S._edit && S._text) setTextMode(false); }],
+    ['note','Bubble oder Text anklicken und ziehen. Funktioniert nur am Computer, nicht in der Handy-Ansicht.'],
+    ['buttons',[['Positionen zurücksetzen',()=>resetPositions()]]],
+    ['range','bubbleScale','Grösse aller Bubbles',.6,1.4,.01,'×'],
+    ['range','gloss','Glanzpunkt',0,90,1,'%'],
+    ['range','shadow','Schatten',0,1,.05,''],
+    ['range','dim','Sichtbarkeit der anderen Bubbles beim Darüberfahren',.1,1,.05,''],
+    ...BUBBLE_NAMES.flatMap(([k,name])=>[
+      ['sub',name],
+      ['range',`bubbles.${k}.k`,'Grösse',.5,1.6,.01,'×'],
+      ['select',`bubbles.${k}.color`,'Farbe',[['gold','Gold'],['ice','Eisblau']]]
+    ])
+  ]},
+  {t:'Bewegung', items:[
+    ['check','float','Bubbles schweben leicht'],
+    ['range','floatAmp','Schweben: Stärke',0,3,.1,'×'],
+    ['range','floatSpeed','Schweben: Tempo',.2,3,.1,'×'],
+    ['range','repel','Ausweichen vor der Maus: Stärke',0,6,.1,''],
+    ['range','repelRadius','Ausweichen vor der Maus: Reichweite',1,3,.05,'×'],
+    ['range','countDur','Hochzählen der Zahlen: Dauer',0,4000,100,' ms'],
+    ['buttons',[['Intro nochmal abspielen',()=>replay()]]]
+  ]},
+  {t:'Tabelle und Diagramme', items:[
+    ['range','rowPad','Zeilenhöhe der Tabelle',4,18,1,' px'],
+    ['range','barWidth','Balkenbreite',.3,.9,.01,'',()=>renderBars()],
+    ['range','barRadius','Abrundung der Balken',0,10,.5,' px',()=>renderBars()],
+    ['range','chartDur','Balken: Dauer der Animation',.2,3,.1,' s'],
+    ['range','lineWidth','Aktienkurs: Linienstärke',.5,3,.1,'×'],
+    ['range','areaOpacity','Aktienkurs: Fläche unter der Medartis-Linie',0,.8,.02,'']
+  ]},
+  {t:'Layout', items:[
+    ['range','maxW','Maximale Breite des Inhalts',960,1600,10,' px'],
+    ['range','secGap','Abstand zwischen Bubbles und Tabelle',0,160,2,' px']
+  ]},
+  {t:'Speichern', items:[['save']]}
+];
+
+const controls = [];
+const decimals = step => (String(step).split('.')[1] || '').length;
+function buildPanel(){
+  SCHEMA.forEach(sec=>{
+    const det = document.createElement('details'); if(sec.open) det.open = true;
+    det.innerHTML = `<summary>${sec.t}</summary>`;
+    const box = document.createElement('div'); box.className = 'adm-sec'; det.appendChild(box);
+    sec.items.forEach(it=>{
+      const [type] = it;
+      if(type === 'range'){
+        const [,p,label,min,max,step,unit,after] = it;
+        const row = document.createElement('label'); row.className = 'adm-row';
+        row.innerHTML = `<span>${label}</span><output></output><input type="range" min="${min}" max="${max}" step="${step}">`;
+        const inp = row.querySelector('input'), out = row.querySelector('output');
+        const sync = ()=>{ inp.value = getP(p); out.textContent = (+getP(p)).toFixed(decimals(step)) + unit; };
+        inp.addEventListener('input', ()=>{ setP(p, +inp.value); out.textContent = (+inp.value).toFixed(decimals(step)) + unit; apply(); after && after(); });
+        controls.push(sync); box.appendChild(row);
+      } else if(type === 'color'){
+        const [,p,label] = it;
+        const row = document.createElement('div'); row.className = 'adm-row adm-color';
+        row.innerHTML = `<span>${label}</span><input type="color" aria-label="${label}"><input type="text" maxlength="7" aria-label="${label} als Hex-Code">`;
+        const [col, txt] = row.querySelectorAll('input');
+        const sync = ()=>{ col.value = getP(p).toLowerCase(); txt.value = getP(p).toUpperCase(); };
+        col.addEventListener('input', ()=>{ setP(p, col.value.toUpperCase()); txt.value = col.value.toUpperCase(); apply(); });
+        txt.addEventListener('change', ()=>{ let v = txt.value.trim(); if(!v.startsWith('#')) v = '#' + v;
+          if(/^#[0-9a-f]{6}$/i.test(v)){ setP(p, v.toUpperCase()); sync(); apply(); } else sync(); });
+        controls.push(sync); box.appendChild(row);
+      } else if(type === 'check'){
+        const [,p,label,after] = it;
+        const row = document.createElement('label'); row.className = 'adm-check';
+        row.innerHTML = `<input type="checkbox"><span>${label}</span>`;
+        const inp = row.querySelector('input');
+        const sync = ()=>{ inp.checked = !!getP(p); };
+        inp.addEventListener('change', ()=>{ setP(p, inp.checked); apply(); after && after(); controls.forEach(f=>f()); });
+        controls.push(sync); box.appendChild(row);
+      } else if(type === 'select'){
+        const [,p,label,opts] = it;
+        const row = document.createElement('label'); row.className = 'adm-row';
+        row.innerHTML = `<span>${label}</span><select>${opts.map(([v,t])=>`<option value="${v}">${t}</option>`).join('')}</select>`;
+        const sel = row.querySelector('select');
+        const sync = ()=>{ sel.value = String(getP(p)); };
+        sel.addEventListener('change', ()=>{ setP(p, typeof getP(p) === 'number' ? +sel.value : sel.value); apply(); });
+        controls.push(sync); box.appendChild(row);
+      } else if(type === 'sub'){
+        const d = document.createElement('div'); d.className = 'adm-sub'; d.textContent = it[1]; box.appendChild(d);
+      } else if(type === 'note'){
+        const d = document.createElement('p'); d.className = 'adm-note'; d.textContent = it[1]; box.appendChild(d);
+      } else if(type === 'buttons'){
+        const d = document.createElement('div'); d.className = 'adm-btns';
+        it[1].forEach(([t,fn])=>{ const b = document.createElement('button'); b.type = 'button'; b.className = 'b'; b.textContent = t; b.addEventListener('click', fn); d.appendChild(b); });
+        box.appendChild(d);
+      } else if(type === 'save'){
+        box.innerHTML = `
+          <p class="adm-note">Änderungen wirken sofort, gehen aber beim Neuladen der Seite verloren. Mit «Als HTML-Datei speichern» lädst du eine neue Datei herunter, in der alle Texte, Zahlen und Einstellungen fest eingebaut sind.</p>
+          <div class="adm-btns"><button type="button" class="b primary" data-act="export">Als HTML-Datei speichern</button></div>
+          <label class="adm-check"><input type="checkbox" data-hide><span>In der gespeicherten Datei den Button «Design anpassen» verstecken. Das Panel öffnet sich dann nur noch mit <b>Option + Shift + D</b> oder mit <b>#admin</b> am Ende der Adresse.</span></label>
+          <div class="adm-sub">Einstellungen als Text</div>
+          <p class="adm-note">Enthält Design und Diagrammwerte, aber keine Texte. Zum Weitergeben oder Sichern: anzeigen, kopieren, später hier einfügen und übernehmen.</p>
+          <textarea spellcheck="false" aria-label="Einstellungen als Text"></textarea>
+          <div class="adm-btns">
+            <button type="button" class="b" data-act="show">Aktuelle Werte anzeigen</button>
+            <button type="button" class="b" data-act="copy">Kopieren</button>
+            <button type="button" class="b" data-act="import">Eingefügte Werte übernehmen</button>
+          </div>
+          <div class="adm-sub">Zurücksetzen</div>
+          <div class="adm-btns">
+            <button type="button" class="b" data-act="undo">Alle Änderungen seit dem Öffnen verwerfen</button>
+            <button type="button" class="b" data-act="factory">Ursprüngliches Design und Diagrammwerte</button>
+          </div>
+          <p class="adm-msg" aria-live="polite"></p>`;
+        const ta = box.querySelector('textarea'), msg = box.querySelector('.adm-msg'), hide = box.querySelector('[data-hide]');
+        controls.push(()=>{ hide.checked = !!S.hideAdmin; });
+        hide.addEventListener('change', ()=>{ S.hideAdmin = hide.checked; });
+        const say = t => { msg.textContent = t; clearTimeout(say.t); say.t = setTimeout(()=>msg.textContent = '', 6000); };
+        box.querySelector('[data-act="export"]').addEventListener('click', ()=>{
+          if(exportHTML()) say('Datei wird heruntergeladen. Sie heisst «key-financial-figures-2025.html» und liegt danach in deinem Download-Ordner.');
+          else say('Speichern hat nicht geklappt: Die Seite wurde von aussen verändert. Lade die Datei neu und versuche es nochmals.');
+        });
+        box.querySelector('[data-act="show"]').addEventListener('click', ()=>{ ta.value = JSON.stringify(cleanSettings(), null, 2); say('Werte angezeigt.'); });
+        box.querySelector('[data-act="copy"]').addEventListener('click', async ()=>{
+          if(!ta.value) ta.value = JSON.stringify(cleanSettings(), null, 2);
+          try{ await navigator.clipboard.writeText(ta.value); say('In die Zwischenablage kopiert.'); }
+          catch(e){ ta.select(); say('Text ist markiert. Drücke jetzt Cmd + C zum Kopieren.'); }
+        });
+        box.querySelector('[data-act="import"]').addEventListener('click', ()=>{
+          try{
+            const obj = JSON.parse(ta.value);
+            if(!obj || typeof obj !== 'object' || !obj.colors) throw 0;
+            const keepText = S._text;
+            S = normalise(merge(clone(DEFAULTS), obj)); refreshAll(keepText); say('Werte übernommen.');
+          }catch(e){ say('Dieser Text ist kein gültiges Einstellungs-Format. Hole ihn nochmals vollständig über «Aktuelle Werte anzeigen».'); }
+        });
+        box.querySelector('[data-act="undo"]').addEventListener('click', ()=>{
+          const keepText = S._text;
+          S = normalise(clone(LOADED));
+          copyTexts(new DOMParser().parseFromString(PRISTINE, 'text/html'), document);
+          refreshAll(keepText); say('Texte, Zahlen und Design sind zurück auf dem Stand beim Öffnen der Seite.');
+        });
+        box.querySelector('[data-act="factory"]').addEventListener('click', ()=>{
+          const keepText = S._text;
+          S = normalise(clone(DEFAULTS)); refreshAll(keepText); say('Ursprüngliches Design und Diagrammwerte wiederhergestellt. Texte bleiben, wie sie sind.');
+        });
+      }
+    });
+    admBody.appendChild(det);
+  });
+}
+function refreshAll(keepText){
+  apply(); renderBars(); updateShareLabels(); finishCount();
+  if(keepText) setTextMode(true); else controls.forEach(f=>f());
+}
+function cleanSettings(){ const o = {}; for(const k in S) if(k[0] !== '_') o[k] = S[k]; return o; }
+function exportHTML(){
+  if(document.activeElement && document.activeElement.hasAttribute('data-ed')) document.activeElement.blur();
+  closePop(true);
+  const doc = new DOMParser().parseFromString(PRISTINE, 'text/html');
+  if(!copyTexts(document, doc)) return false;
+  doc.getElementById('design-settings').textContent = JSON.stringify(cleanSettings(), null, 2);
+  doc.documentElement.classList.remove('js');
+  const t1 = doc.querySelector('h1 .t1'), yr = doc.querySelector('h1 .yr'), brand = doc.querySelector('.brand');
+  if(t1 && yr && brand) doc.title = `${t1.textContent.trim()} ${yr.textContent.trim()} – ${brand.textContent.trim()}`;
+  const html = '<!DOCTYPE html>\n' + doc.documentElement.outerHTML;
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([html], {type:'text/html'}));
+  a.download = 'key-financial-figures-2025.html';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 4000);
+  return true;
+}
+function openPanel(open){
+  adm.classList.toggle('open', open);
+  admBtn.setAttribute('aria-expanded', open);
+  if(open) controls.forEach(f=>f());
+  if(!open){
+    if(S._edit){ S._edit = false; apply(); controls.forEach(f=>f()); }
+  }
+}
+admBtn.addEventListener('click', ()=>openPanel(!adm.classList.contains('open')));
+document.getElementById('adm-close').addEventListener('click', ()=>openPanel(false));
+document.getElementById('adm-side').addEventListener('click', ()=>adm.classList.toggle('left'));
+document.getElementById('ted-done').addEventListener('click', ()=>setTextMode(false));
+document.getElementById('ted-panel').addEventListener('click', ()=>openPanel(true));
+addEventListener('keydown', e=>{
+  if(e.key === 'Escape' && adm.classList.contains('open')) openPanel(false);
+  if(e.altKey && e.shiftKey && e.code === 'KeyD'){ e.preventDefault(); openPanel(!adm.classList.contains('open')); }
+});
+if(S.hideAdmin && !/admin/.test(location.hash)) admBtn.hidden = true;
+
+/* ================= START ================= */
+buildPanel();
+apply();
+renderBars();
+io.observe(bars); io.observe(document.getElementById('share'));
+requestAnimationFrame(()=>{ field.classList.add('ready'); countUp(); requestAnimationFrame(tick); });
+if(/admin/.test(location.hash)) openPanel(true);
+</script>
+</body>
+</html>
